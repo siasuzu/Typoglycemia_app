@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Typoglycemia Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>変換結果</h1>
+    <div id="result">
+        <p>
+            <b>{{ input_text }}</b>
+            <br>{{ output_text }}
+        </p>
+    </div>
+    <a href="/">戻る</a>
+</body>
+</html>

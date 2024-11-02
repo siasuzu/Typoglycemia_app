@@ -1,0 +1,42 @@
+body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    background-color: #f2f2f2;
+    text-align: center;
+}
+
+h1 {
+    color: rgb(12, 12, 12);
+    text-transform: uppercase;
+    font-size: 50px;
+    margin: 0;
+    padding: 20px;
+    
+}
+
+textarea {
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    box-shadow: inset 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}  
+p {
+    border: 1px solid #ccc; /* 1pxの灰色実線で囲む */
+    padding: 20px; /*内側の余白を10px */
+    margin: 20px 0;/* 上下に20pxの余白、左右は0px */
+    background-color: #ecf1a3; /* 背景色を薄い灰色 */
+    border-radius: 10px; /* 角を丸くする */
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* 少し影をつける */
+    
+    
+}

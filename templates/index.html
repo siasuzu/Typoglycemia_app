@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Typoglycemia Generator</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>タイポグリセミア メイカー</h1>
+    <form method="POST">
+        <textarea name="text" rows="10" cols="50" placeholder="ここにテキストを入力してください"></textarea>
+        <button type="submit">生成</button>
+    </form>
+    <p>
+        <b>タイポグリセミア</b>とは、文章中の単語の文字を並べ替えても、最初の文字と最後の文字さえ同じであれば、読めるという面白い現象です。<br>
+        例えば、「こんにちは」を「こにちんは」と並べ替えても、意味が通じますよね。<br>
+        このツールでは、あなたの入力したテキストをタイポグリセミア風に加工してみることができます。
+        
+    </p>
+    
+
+    
+</body>
+</html>
