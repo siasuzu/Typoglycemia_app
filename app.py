@@ -18,7 +18,7 @@ def kanji_katakana_to_hiragana(text):
         result.append(hiragana_word)
     return " ".join(result)
 
-# Text splitting by particles and auxiliaries
+# # Text splitting by particles and auxiliaries
 def split_by_particle_and_auxiliary(text):
     result = []
     tokens = t.tokenize(text)
@@ -39,8 +39,6 @@ def split_by_particle_and_auxiliary(text):
             result.append(" ")
             result.append(surface)
             result.append(" ")
-        elif part_of_speech == '助動詞' and prev_token and prev_token.part_of_speech.split(',')[0] == '助動詞':
-            result[-1] += surface
         elif part_of_speech == '助動詞':
             result.append(" ")
             result.append(surface)
@@ -53,11 +51,19 @@ def split_by_particle_and_auxiliary(text):
             result.append(" ")
             result.append(surface)
             result.append(" ")
+        elif part_of_speech == '形容詞':
+            result.append(" ")
+            result.append(surface)
+            result.append(" ")
+        elif part_of_speech == '助動詞' and prev_token and prev_token.part_of_speech.split(',')[0] == '助動詞':
+            result[-1] += surface
         else:
             result.append(surface)
         prev_token = token
 
     return "".join(result)
+
+
 
 # Shuffling long words
 def shuffle_long_words(text):
