@@ -1,0 +1,53 @@
+<!-- <!DOCTYPE html>
+<html>
+<head>
+    <title>Typoglycemia Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>変換結果</h1>
+    <div id="result">
+        <p>
+            <b>{{ input_text }}</b>
+            <br>{{ output_text }}
+        </p>
+    </div>
+    <a href="/">戻る</a>
+</body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Typoglycemia Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>変換結果</h1>
+    <div id="result">
+        <p>
+            <b>{{ input_text }}</b>
+            <br><span id="output">{{ output_text }}</span>
+        </p>
+        <button id="copyButton">コピー</button>
+    </div>
+    <a href="/">戻る</a>
+
+    <script>
+        const copyButton = document.getElementById('copyButton');
+        const outputText = document.getElementById('output');
+
+        copyButton.addEventListener('click', () => {
+            navigator.clipboard.writeText(outputText.textContent)
+                .then(() => {
+                    alert('コピーしました！');
+                })
+                .catch(err => {
+                    console.error('コピーに失敗しました', err);
+                    alert('コピーに失敗しました。');
+                });
+        });
+    </script>
+</body>
+</html>
